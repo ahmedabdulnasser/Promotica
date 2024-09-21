@@ -1,0 +1,128 @@
+.process-explained {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Process Step Card */
+.process-step {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 30px;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.7s ease all;
+}
+
+.process-step:hover {
+  background-color: hsl(262, 53%, 90%);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 1);
+  transform: translate(-5px, -5px);
+  cursor: default;
+}
+
+/* Text Section */
+.process-text {
+  flex: 1;
+  padding: 1rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.process-text h3 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.process-text p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Image Section */
+.process-image {
+  flex: 1;
+  padding: 1rem;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.process-image img {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.process-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Alternating Layout */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Ensure cards are the same height */
+.process-step,
+.process-step .process-text,
+.process-step .process-image {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .process-step,
+  .reverse {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .process-text,
+  .process-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .process-image img {
+    max-width: 80%;
+    max-height: 200px;
+  }
+}
+.process-bg-img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 80%;
+  opacity: 0.7;
+}
+.p-bg-1 {
+  transform: rotate(180deg) translateY(-150px);
+}
+.p-bg-2 {
+  top: 0;
+  transform: translateY(1500px);
+}
+.p-bg-3 {
+  top: 0;
+  transform: translateY(2500px) rotate(180deg);
+}
